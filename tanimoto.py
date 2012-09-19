@@ -1,3 +1,5 @@
+from operator import or_, and_
+from math import log
 
 def jaccard_index(a, b, sets=False):
     """Compute the Jaccard index of two sets.
@@ -28,3 +30,18 @@ def jaccard_distance(a, b, sets=False):
     """
     return 1 - jaccard_index(a, b, sets)
 
+def tanimoto_index(a, b):
+    """Compute the Tanimoto index of two bitfields.
+
+    This implementation relies on ones being True, and 0 being False.
+    """
+    numer = sum(filter(int, map(and_, a, b)))
+    denom = sum(filter(int, map(or_, a, b)))
+    return numer / denom
+
+def tanimoto_distance(a, b):
+    """Compute the Tanimoto distance of two bitfields.
+
+    Like tanimoto_index, this implementation uses boolean value.
+    """
+    return - log(tanimoto_index(a, b), 2)
