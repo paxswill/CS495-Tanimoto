@@ -42,6 +42,7 @@ def tanimoto_index(a, b):
 def tanimoto_distance(a, b):
     """Compute the Tanimoto distance of two bitfields.
 
-    Like tanimoto_index, this implementation uses boolean value.
+    Like tanimoto_index, this implementation relies on the bitfields
+    being made up of boolean values.
     """
     return - log(tanimoto_index(a, b), 2)
