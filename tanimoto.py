@@ -26,5 +26,5 @@ def jaccard_distance(a, b, sets=False):
     This is simply 1 minus the Jaccard index. See the documentation for
     the jaccard_index function for an explanation of the arguments.
     """
-    return jaccard_index(a, b, sets)
-    
+    return 1 - jaccard_index(a, b, sets)
+
