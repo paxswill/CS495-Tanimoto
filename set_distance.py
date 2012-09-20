@@ -1,3 +1,4 @@
+from __future__ import division
 from operator import or_, and_
 from math import log
 
