@@ -1,2 +1,8 @@
-[Presentation](https://docs.google.com/presentation/d/1u2d2T2XxXhJhsRGYxwfM6xdHnksxi6CO60NYYjcDrqc/edit)
+The Jaccard distance is more suited for comparing membership in sets of objects
+than Euclidian distance and the Pearson coeffcient. Those measurements are more
+suited for comparing discrete numerical values.
+
+Similarly, the Tanimoto index is useful for comparing fixed-length, binary
+attributes between items than for comparing tuples of numerical data or
+variable sized sets.
 
